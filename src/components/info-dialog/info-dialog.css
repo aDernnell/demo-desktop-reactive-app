@@ -38,12 +38,13 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
+        font-size: 1.4em;
 
         > div {
             display: flex;
             .label {
                 font-weight: 600;
-                width: 50px;
+                width: 70px;
             }
 
             &.path {
@@ -54,6 +55,7 @@
                     white-space: nowrap;
                     direction: rtl;
                     cursor: pointer;
+                    color: white;
                     /*font-size: 2em;*/
                 }
             }
