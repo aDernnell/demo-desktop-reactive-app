@@ -1,0 +1,56 @@
+.cmp-toaster {
+    .npop-toast-container {
+        .npop-toast {
+            background-color: var(--background-color);
+            border: 1px solid var(--modal-border-color);
+            color: var(--text-color);
+            overflow: hidden;
+
+            .content {
+                padding-bottom: 0;
+                max-width: 70%;
+
+                .message {
+                    font-size: inherit;
+                }
+
+                .description {
+                    font-size: 14px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+
+            .icon {
+                padding-bottom: 2px;
+                max-width: 20px;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+
+                    &.npop-anim.loading {
+                        fill: var(--text-color);
+                    }
+                }
+            }
+
+            &.success {
+                .icon {
+                    svg {
+                        fill: rgb(6, 83, 6);
+                    }
+                }
+            }
+
+            &.error {
+                .icon {
+                    svg {
+                        fill: rgb(107, 8, 8);
+                    }
+                }
+            }
+        }
+    }
+}

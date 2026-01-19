@@ -1,0 +1,37 @@
+[package]
+name = "demo-fullstack-reactivity"
+version = "0.1.0"
+description = "A Tauri App"
+authors = ["Quentin Allender"]
+license = "MIT"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "demo_fullstack_reactivity_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+tauri-plugin-log = { version = "2", features = ["colored"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+log = "^0.4"
+specta = { version = "1.0.5", features = ["export"] }
+specta-typescript = "0.0.9"
+thiserror = "1.0.61"
+walkdir = "2.5.0"
+notify = {version = "6.1.1", features = ["serde"] }
+notify-debouncer-mini = {version = "0.4.1", features = ["serde"] }
+uuid = { version = "1.18.1", features = ["v4"] }
+tauri-plugin-dialog = "2"
+yaml-rust2 = "0.10.4"
+

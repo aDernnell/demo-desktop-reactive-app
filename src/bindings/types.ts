@@ -1,0 +1,18 @@
+export type FsChangesChunk = { updates: { [key: string]: Framework }; deletes: string[] };
+
+export type Framework = { path: string; name: string; homepage_url: string; description: string; entity_type: string };
+
+export type ImportFilesEnd = {
+    command_id: string;
+    total_file_count: number;
+    process_file_count: number;
+    success_file_count: number;
+    failure_file_count: number;
+};
+
+export type ImportFilesChunk = {
+    command_id: string;
+    total_file_count: number;
+    process_file_count: number;
+    frameworks: { [key: string]: Framework };
+};

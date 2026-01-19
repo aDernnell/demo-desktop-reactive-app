@@ -1,0 +1,19 @@
+.app {
+    padding: 16px;
+
+    .divider {
+        margin: 20px 0;
+        border: none;
+        display: flex;
+        justify-content: center;
+
+        &::before {
+            content: '';
+            width: 120px;
+            display: block;
+            height: 4px;
+            border-radius: 8px;
+            background-color: var(--muted-border-color);
+        }
+    }
+}

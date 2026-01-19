@@ -1,0 +1,64 @@
+.cmp-file-list {
+    .filters {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .table {
+        display: table;
+        border-collapse: collapse;
+        width: 100%;      
+
+        .thead {
+            display: table-header-group;
+
+            .tr {
+                display: table-row;
+                height: 32px;
+
+                .th {
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding-left: 5px;
+                    box-sizing: border-box;
+                    font-weight: 600;
+                    color: var(--text-inverse-color);
+                }
+            }
+        }
+
+        .tbody {
+            display: table-row-group;
+
+            .tr {
+                display: table-row;
+                height: 32px;
+
+                .td {
+                    display: table-cell;
+                    vertical-align: middle;
+                    max-width: 28vw;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    box-sizing: border-box;
+
+                    .info-button {
+                        font-size: 0.9em;
+                        padding: 4px;
+                        height: auto;
+                        background-color: transparent;
+                    }
+                }
+
+                &:nth-child(odd) {
+                    background-color: var(--table-row-stripped-background-color);
+                }
+            }
+        }
+    }
+}
